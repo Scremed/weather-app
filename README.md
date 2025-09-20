@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Weather App
+
+A modern weather application built with TypeScript and React, leveraging the Next.js framework to deliver real-time weather data, air quality, and forecasts for any city worldwide.
+
+## Features
+
+- **Current Weather:** See real-time weather conditions (temperature, description, icon) for your selected city.
+- **Five-Day Forecast:** Detailed 5-day weather outlook with min/max temperatures and weather icons.
+- **Feels Like:** Insight into how the temperature feels compared to actual readings.
+- **Air Quality:** Up-to-date air pollution metrics.
+- **UV Index:** Current UV index for the location.
+- **Wind, Humidity, Pressure, Visibility, Sunset:** Comprehensive meteorological parameters.
+- **Daily Forecasts:** Carousel view of today's hourly weather.
+- **Popular Cities:** Quick selection of pre-defined major cities.
+- **Interactive Map:** OpenStreetMap integration to visualize the selected city.
+- **Responsive Design:** Works seamlessly on desktop and mobile devices.
+- **Debounced City Search:** Efficient city search with input debouncing to minimize API calls.
+
+## Technologies Used
+
+- **TypeScript** & **React** (with functional components and hooks)
+- **Next.js** (App Router & API routes)
+- **Axios** for API requests
+- **Moment.js** for date and time formatting
+- **OpenWeatherMap API** for weather and forecast data
+- **OpenStreetMap** (via React-Leaflet) for interactive mapping
+- **Lodash** for utility functions (debounce)
+- **TailwindCSS** for styling
+- **Context API** for global state management
 
 ## Getting Started
 
-First, run the development server:
+1. **Clone this repository:**
+   ```sh
+   git clone https://github.com/Scremed/weather-app.git
+   cd weather-app
+   ```
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+2. **Install dependencies:**
+   ```sh
+   npm install
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. **Set up your environment variables:**
+   - Create a `.env.local` file in the root directory.
+   - Add your OpenWeatherMap API key:
+     ```
+     OPENWEATHERMAP_API_KEY=your_api_key_here
+     ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+4. **Run the development server:**
+   ```sh
+   npm run dev
+   ```
+   Visit [http://localhost:3000](http://localhost:3000) in your browser.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Project Structure
 
-## Learn More
+- `app/Components/` — Reusable UI components (Temperature, DailyForecast, FeelsLike, etc.)
+- `app/api/` — Next.js API routes for backend logic (fetching weather, air quality, etc.)
+- `app/context/` — Context providers for global state.
+- `app/page.tsx` — Main application page.
 
-To learn more about Next.js, take a look at the following resources:
+## API Reference
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Uses the [OpenWeatherMap API](https://openweathermap.org/api) — you need a free API key.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Contributing
 
-## Deploy on Vercel
+Contributions are welcome! Please open an issue or submit a pull request.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project is licensed under the MIT License. See `LICENSE` for details.
+
+---
+
+**Author:** [Scremed](https://github.com/Scremed)
